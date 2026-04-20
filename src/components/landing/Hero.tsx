@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BrowserFrame } from "./BrowserFrame";
+import { BookDemoDialog } from "./BookDemoDialog";
 import classOverview from "@/assets/class-overview.png";
 
 export const Hero = () => {
