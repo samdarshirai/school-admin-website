@@ -3,6 +3,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { BookDemoDialog } from "./BookDemoDialog";
 
 const links = [
   { href: "#features", label: "Features" },
@@ -52,9 +53,13 @@ export const Nav = () => {
           <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground">
             Sign in
           </a>
-          <Button asChild className="pill bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-10 px-5">
-            <a href="#contact">Book a Demo</a>
-          </Button>
+          <BookDemoDialog
+            trigger={
+              <Button className="pill bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-10 px-5">
+                Book a Demo
+              </Button>
+            }
+          />
         </div>
 
         <Sheet>
@@ -70,9 +75,13 @@ export const Nav = () => {
                   {l.label}
                 </a>
               ))}
-              <Button asChild className="pill mt-4 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
-                <a href="#contact">Book a Demo</a>
-              </Button>
+              <BookDemoDialog
+                trigger={
+                  <Button className="pill mt-4 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold w-full">
+                    Book a Demo
+                  </Button>
+                }
+              />
             </nav>
           </SheetContent>
         </Sheet>

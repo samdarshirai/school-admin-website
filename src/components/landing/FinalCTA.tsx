@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BookDemoDialog } from "./BookDemoDialog";
 
 export const FinalCTA = () => {
   return (
@@ -15,11 +16,13 @@ export const FinalCTA = () => {
             Join forward-thinking schools using Academic Planner AI to plan, track, and execute with precision.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Button asChild className="pill bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 text-base font-semibold">
-              <a href="#contact">
-                Book a Demo <ArrowRight className="ml-1" />
-              </a>
-            </Button>
+            <BookDemoDialog
+              trigger={
+                <Button className="pill bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 text-base font-semibold">
+                  Book a Demo <ArrowRight className="ml-1" />
+                </Button>
+              }
+            />
             <Button
               asChild
               variant="outline"
