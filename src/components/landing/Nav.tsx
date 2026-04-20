@@ -3,6 +3,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import { BookDemoDialog } from "./BookDemoDialog";
 
 const links = [
   { href: "#features", label: "Features" },
