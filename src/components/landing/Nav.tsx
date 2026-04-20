@@ -53,9 +53,13 @@ export const Nav = () => {
           <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground">
             Sign in
           </a>
-          <Button asChild className="pill bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-10 px-5">
-            <a href="#contact">Book a Demo</a>
-          </Button>
+          <BookDemoDialog
+            trigger={
+              <Button className="pill bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-10 px-5">
+                Book a Demo
+              </Button>
+            }
+          />
         </div>
 
         <Sheet>
