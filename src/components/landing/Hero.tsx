@@ -30,11 +30,13 @@ export const Hero = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Button asChild className="pill bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-7 text-base font-semibold">
-                <a href="#contact">
-                  Book a Demo <ArrowRight className="ml-1" />
-                </a>
-              </Button>
+              <BookDemoDialog
+                trigger={
+                  <Button className="pill bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-7 text-base font-semibold">
+                    Book a Demo <ArrowRight className="ml-1" />
+                  </Button>
+                }
+              />
               <Button
                 asChild
                 variant="outline"
