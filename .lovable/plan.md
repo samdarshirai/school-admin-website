@@ -1,5 +1,5 @@
 
-## Academic Planner AI — Marketing Site Plan
+## Academic Planner — Marketing Site Plan
 
 A high-conversion, single-page marketing site for school administrators, built in the Binance-inspired fintech aesthetic (yellow #F0B90B as accent only, alternating light/dark sections, clean data-driven cards).
 
@@ -11,7 +11,7 @@ A high-conversion, single-page marketing site for school administrators, built i
 
 ### Page sections (top → bottom)
 
-1. **Sticky Nav** — Logo "Academic Planner AI", links (Features, How it works, Pricing-anchor, Contact), yellow "Book a Demo" pill CTA.
+1. **Sticky Nav** — Logo "Academic Planner", links (Features, How it works, Pricing-anchor, Contact), yellow "Book a Demo" pill CTA.
 
 2. **Hero (light)** — H1 "Run Your School Like a High-Performance System", subhead, two CTAs (yellow primary "Book a Demo", ghost "See Platform"), right-side hero visual using **Class_Overview.png** in a tilted browser-frame mockup with soft shadow.
 

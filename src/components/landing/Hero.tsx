@@ -1,10 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BrowserFrame } from "./BrowserFrame";
-import { BookDemoDialog } from "./BookDemoDialog";
+import { useDemoModal } from "@/hooks/use-demo-modal";
 import classOverview from "@/assets/class-overview.png";
 
 export const Hero = () => {
+  const { open: openDemo } = useDemoModal();
+
   return (
     <section id="top" className="relative overflow-hidden bg-background">
       <div className="container py-16 md:py-24 lg:py-28">
@@ -30,13 +32,12 @@ export const Hero = () => {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <BookDemoDialog
-                trigger={
-                  <Button className="pill bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-7 text-base font-semibold">
-                    Book a Demo <ArrowRight className="ml-1" />
-                  </Button>
-                }
-              />
+              <Button
+                onClick={openDemo}
+                className="pill bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-7 text-base font-semibold"
+              >
+                Book a Demo <ArrowRight className="ml-1" />
+              </Button>
               <Button
                 asChild
                 variant="outline"
@@ -59,7 +60,7 @@ export const Hero = () => {
           <div className="lg:col-span-6 reveal">
             <div className="relative">
               <div className="absolute -inset-6 bg-gradient-to-tr from-primary/10 via-transparent to-transparent rounded-3xl blur-2xl" aria-hidden />
-              <BrowserFrame src={classOverview} alt="Academic Planner AI — Class Overview dashboard" tilt />
+              <BrowserFrame src={classOverview} alt="Academic Planner — Class Overview dashboard" tilt />
             </div>
           </div>
         </div>

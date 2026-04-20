@@ -3,7 +3,7 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { BookDemoDialog } from "./BookDemoDialog";
+import { useDemoModal } from "@/hooks/use-demo-modal";
 
 const links = [
   { href: "#features", label: "Features" },
@@ -14,6 +14,7 @@ const links = [
 
 export const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
+  const { open: openDemo } = useDemoModal();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -31,10 +32,8 @@ export const Nav = () => {
     >
       <div className="container flex h-16 items-center justify-between">
         <a href="#top" className="flex items-center gap-2 font-bold tracking-tight">
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground text-sm font-extrabold">
-            A
-          </span>
-          <span className="text-foreground">Academic Planner AI</span>
+          <img src="/logo-icon.png" alt="Academic Planner" className="h-8 w-8 object-contain" />
+          <span className="text-foreground">Academic Planner</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -53,13 +52,9 @@ export const Nav = () => {
           <a href="#contact" className="text-sm font-medium text-muted-foreground hover:text-foreground">
             Sign in
           </a>
-          <BookDemoDialog
-            trigger={
-              <Button className="pill bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-10 px-5">
-                Book a Demo
-              </Button>
-            }
-          />
+          <Button onClick={openDemo} className="pill bg-primary text-primary-foreground hover:bg-primary/90 font-semibold h-10 px-5">
+            Book a Demo
+          </Button>
         </div>
 
         <Sheet>
@@ -75,13 +70,9 @@ export const Nav = () => {
                   {l.label}
                 </a>
               ))}
-              <BookDemoDialog
-                trigger={
-                  <Button className="pill mt-4 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold w-full">
-                    Book a Demo
-                  </Button>
-                }
-              />
+              <Button onClick={openDemo} className="pill mt-4 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
+                Book a Demo
+              </Button>
             </nav>
           </SheetContent>
         </Sheet>

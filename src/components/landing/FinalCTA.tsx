@@ -1,8 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { BookDemoDialog } from "./BookDemoDialog";
+import { useDemoModal } from "@/hooks/use-demo-modal";
 
 export const FinalCTA = () => {
+  const { open: openDemo } = useDemoModal();
+
   return (
     <section id="contact" className="surface-dark relative overflow-hidden">
       <div className="absolute inset-x-0 top-0 h-px bg-primary/60" aria-hidden />
@@ -13,16 +15,15 @@ export const FinalCTA = () => {
             <span className="text-primary">Like a System</span>
           </h2>
           <p className="mt-5 text-lg text-[hsl(var(--surface-dark-muted))]">
-            Join forward-thinking schools using Academic Planner AI to plan, track, and execute with precision.
+            Join forward-thinking schools using Academic Planner to plan, track, and execute with precision.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <BookDemoDialog
-              trigger={
-                <Button className="pill bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 text-base font-semibold">
-                  Book a Demo <ArrowRight className="ml-1" />
-                </Button>
-              }
-            />
+            <Button
+              onClick={openDemo}
+              className="pill bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 text-base font-semibold"
+            >
+              Book a Demo <ArrowRight className="ml-1" />
+            </Button>
             <Button
               asChild
               variant="outline"

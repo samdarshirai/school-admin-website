@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Academic Planner AI — Binance-inspired fintech design system.
+/* Academic Planner — Binance-inspired fintech design system.
    All colors MUST be HSL. Yellow is for CTAs/highlights only. */
 
 @layer base {
@@ -138,5 +138,54 @@
   .card-soft:hover {
     box-shadow: var(--shadow-card-hover);
     transform: translateY(-2px);
+  }
+
+  /* Book-a-Demo form controls */
+  .demo-input {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    border: 1px solid #E6E8EA;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: hsl(var(--foreground));
+    background: hsl(var(--background));
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .demo-input::placeholder {
+    color: hsl(var(--muted-foreground));
+  }
+
+  .demo-input:focus {
+    border-color: #F0B90B;
+    box-shadow: 0 0 0 3px hsl(45 92% 49% / 0.15);
+  }
+
+  .demo-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #1E2026;
+    background: #F0B90B;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+  }
+
+  .demo-submit:hover:not(:disabled) {
+    opacity: 0.92;
+    transform: translateY(-1px);
+  }
+
+  .demo-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 }
