@@ -75,9 +75,13 @@ export const Nav = () => {
                   {l.label}
                 </a>
               ))}
-              <Button asChild className="pill mt-4 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
-                <a href="#contact">Book a Demo</a>
-              </Button>
+              <BookDemoDialog
+                trigger={
+                  <Button className="pill mt-4 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold w-full">
+                    Book a Demo
+                  </Button>
+                }
+              />
             </nav>
           </SheetContent>
         </Sheet>
