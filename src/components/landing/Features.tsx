@@ -49,12 +49,12 @@ const features = [
     bullets: ["Immutable activity log", "Per-teacher contribution view", "Exportable reports"],
   },
   {
-    eyebrow: "Section Performance",
-    title: "Identify underperformers early.",
-    body: "Compare sections side by side, surface laggards, and intervene weeks earlier — not at year-end review.",
+    eyebrow: "Track Section Performance in Real Time",
+    title: "Spot delays early. Fix them faster.",
+    body: "Track how each section is progressing in real time and identify where teaching is falling behind. Instantly see gaps like Class 10 Section A running 16.8% behind with multiple missed milestones—so you can act before it impacts results.",
     image: sectionPerformance,
-    imageAlt: "Section performance comparison",
-    bullets: ["Side-by-side benchmarks", "Trend lines per section", "Actionable insights"],
+    imageAlt: "Dashboard showing Section A with 16.8% velocity gap and 3 missed deadlines",
+    bullets: ["Track missed deadlines and pacing gaps", "Identify sections falling behind instantly", "Automatically flag critical subjects"],
   },
   {
     eyebrow: "Timetable Generator",
