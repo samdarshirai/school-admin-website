@@ -20,30 +20,32 @@ const pillars = [
 
 export const Pillars = () => {
   return (
-    <section id="pillars" className="surface-dark">
-      <div className="container py-20 md:py-28">
+    <section id="pillars" className="relative py-16 md:py-24 overflow-hidden">
+      <div className="container relative z-10">
         <div className="max-w-3xl reveal">
-          <span className="text-xs font-semibold uppercase tracking-wider text-primary">The Platform</span>
-          <h2 className="mt-3 text-3xl md:text-5xl font-extrabold text-[hsl(var(--surface-dark-foreground))] leading-tight">
+          <span className="inline-block px-4 py-1.5 rounded-full glass-button text-xs font-bold uppercase tracking-widest text-primary mb-6">
+            The Platform
+          </span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight tracking-tight">
             Academic Intelligence for{" "}
-            <span className="text-primary">Modern Schools</span>
+            <span className="text-primary italic">Modern Schools</span>
           </h2>
-          <p className="mt-5 text-lg text-[hsl(var(--surface-dark-muted))] max-w-2xl">
-            Three pillars that turn fragmented academic operations into a high-performance system.
+          <p className="mt-8 text-xl text-muted-foreground max-w-2xl leading-relaxed font-medium">
+            Three core principles that turn fragmented academic operations into a high-performance system.
           </p>
         </div>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-5">
+        <div className="mt-20 grid md:grid-cols-3 gap-8">
           {pillars.map((p) => (
             <div
               key={p.title}
-              className="reveal rounded-xl border border-[hsl(var(--surface-dark-border))] bg-[hsl(240_4%_16%)] p-7 transition-all duration-300 hover:border-primary/40 hover:-translate-y-1"
+              className="glass-card p-10 rounded-[3rem] hover:scale-105 hover:bg-white transition-all duration-500 reveal group"
             >
-              <div className="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <p.icon className="h-5 w-5" />
+              <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl glass-button border-black/5 bg-black/5 text-primary group-hover:scale-110 transition-transform shadow-[0_10px_15px_rgba(240,185,11,0.1)]">
+                <p.icon className="h-8 w-8" />
               </div>
-              <h3 className="mt-5 text-xl font-bold text-[hsl(var(--surface-dark-foreground))]">{p.title}</h3>
-              <p className="mt-2 text-sm text-[hsl(var(--surface-dark-muted))] leading-relaxed">{p.body}</p>
+              <h3 className="mt-8 text-2xl font-black text-foreground tracking-tight">{p.title}</h3>
+              <p className="mt-4 text-lg text-muted-foreground leading-relaxed font-medium">{p.body}</p>
             </div>
           ))}
         </div>

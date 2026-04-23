@@ -68,16 +68,18 @@ const features = [
 
 export const Features = () => {
   return (
-    <section id="features" className="bg-secondary/40 border-y border-border">
-      <div className="container py-20 md:py-28">
-        <div className="max-w-2xl mb-16 reveal">
-          <span className="text-xs font-semibold uppercase tracking-wider text-primary">Platform</span>
-          <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-extrabold text-foreground">
-            Everything you need to run academics — built in.
+    <section id="features" className="relative py-16 md:py-24">
+      <div className="container relative z-10">
+        <div className="max-w-3xl mb-20 reveal">
+          <span className="inline-block px-4 py-1.5 rounded-full glass-button text-xs font-bold uppercase tracking-widest text-primary mb-6">
+            Platform Capabilities
+          </span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight">
+            Everything you need to run <span className="text-primary italic">academics</span> — built in.
           </h2>
         </div>
 
-        <div className="space-y-24 md:space-y-32">
+        <div className="space-y-12 md:space-y-16">
           {features.map((f, i) => (
             <FeatureRow key={f.eyebrow} {...f} reverse={i % 2 === 1} />
           ))}

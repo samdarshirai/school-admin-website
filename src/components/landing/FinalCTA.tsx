@@ -6,31 +6,34 @@ export const FinalCTA = () => {
   const { open: openDemo } = useDemoModal();
 
   return (
-    <section id="contact" className="surface-dark relative overflow-hidden">
-      <div className="absolute inset-x-0 top-0 h-px bg-primary/60" aria-hidden />
-      <div className="container py-20 md:py-28 text-center">
-        <div className="max-w-3xl mx-auto reveal">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-[hsl(var(--surface-dark-foreground))] leading-tight">
-            Start Running Your School{" "}
-            <span className="text-primary">Like a System</span>
-          </h2>
-          <p className="mt-5 text-lg text-[hsl(var(--surface-dark-muted))]">
-            Join forward-thinking schools using Academic Planner to plan, track, and execute with precision.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Button
-              onClick={openDemo}
-              className="pill bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8 text-base font-semibold"
-            >
-              Book a Demo <ArrowRight className="ml-1" />
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="pill h-12 px-8 text-base font-semibold border-[hsl(var(--surface-dark-border))] bg-transparent text-[hsl(var(--surface-dark-foreground))] hover:bg-[hsl(240_4%_18%)] hover:text-[hsl(var(--surface-dark-foreground))]"
-            >
-              <a href="#features">Explore Platform</a>
-            </Button>
+    <section id="contact-final" className="relative py-16 md:py-24 overflow-hidden">
+      <div className="container relative z-10">
+        <div className="glass-card-yellow p-12 md:p-24 rounded-[4rem] text-center relative overflow-hidden reveal border-primary/20 bg-primary/5 shadow-xl">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/10 blur-[100px] -z-10" />
+          
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-black text-foreground leading-tight tracking-tight">
+              Start Running Your School <br />
+              <span className="text-primary italic">Like a High-Performance System</span>
+            </h2>
+            <p className="mt-10 text-xl md:text-2xl text-muted-foreground font-medium max-w-2xl mx-auto leading-relaxed">
+              Join forward-thinking schools using Ace Planner to plan, track, and execute with precision.
+            </p>
+            <div className="mt-12 flex flex-wrap justify-center gap-6">
+              <Button
+                onClick={openDemo}
+                className="pill bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all h-16 px-12 text-xl font-bold shadow-[0_10px_25px_rgba(240,185,11,0.3)]"
+              >
+                Book a Demo <ArrowRight className="ml-2 h-6 w-6" />
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="pill glass-button h-16 px-12 text-xl font-bold border-black/5 text-foreground hover:bg-black/10"
+              >
+                <a href="#features">Explore Platform</a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
