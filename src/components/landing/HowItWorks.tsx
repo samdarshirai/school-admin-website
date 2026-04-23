@@ -7,28 +7,32 @@ const steps = [
 
 export const HowItWorks = () => {
   return (
-    <section id="how" className="bg-background">
-      <div className="container py-20 md:py-28">
-        <div className="max-w-2xl reveal">
-          <span className="text-xs font-semibold uppercase tracking-wider text-primary">How it works</span>
-          <h2 className="mt-3 text-3xl md:text-4xl font-extrabold text-foreground">
-            Four steps from chaos to clarity.
+    <section id="how" className="relative py-24 md:py-32">
+      <div className="container relative z-10">
+        <div className="max-w-3xl reveal text-center mx-auto mb-20">
+          <span className="inline-block px-4 py-1.5 rounded-full glass-button text-xs font-bold uppercase tracking-widest text-primary mb-6">
+            Implementation
+          </span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground leading-tight">
+            Four steps from <span className="text-primary italic">chaos</span> to clarity.
           </h2>
         </div>
 
-        <div className="mt-14 relative">
-          <div className="hidden lg:block absolute top-6 left-0 right-0 h-px bg-border" aria-hidden />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
-            {steps.map((s) => (
-              <div key={s.n} className="reveal">
-                <div className="relative inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground font-extrabold text-sm ring-8 ring-background">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          {steps.map((s, idx) => (
+            <div key={s.n} className="reveal relative group">
+              {idx < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-12 left-full w-full h-[2px] bg-gradient-to-r from-primary/20 to-transparent -z-10" />
+              )}
+              <div className="glass-card p-10 rounded-[3rem] h-full hover:bg-white transition-all duration-500 border-white/40 group-hover:border-primary/20">
+                <div className="relative inline-flex h-16 w-16 items-center justify-center rounded-2xl glass-button border-black/5 bg-black/5 text-primary font-black text-2xl shadow-[0_10px_15px_rgba(240,185,11,0.1)]">
                   {s.n}
                 </div>
-                <h3 className="mt-5 text-lg font-semibold text-foreground">{s.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.body}</p>
+                <h3 className="mt-8 text-2xl font-black text-foreground tracking-tight">{s.title}</h3>
+                <p className="mt-4 text-muted-foreground text-lg leading-relaxed font-medium">{s.body}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -16,26 +16,28 @@ export const BrowserFrame = ({ src, alt, className, tilt = false }: BrowserFrame
     <div
       onClick={() => open(src, alt)}
       className={cn(
-        "group relative rounded-xl border border-border bg-card overflow-hidden shadow-card-hover cursor-zoom-in transition-all duration-500",
+        "group relative rounded-2xl border border-white/10 bg-black/40 backdrop-blur-md overflow-hidden shadow-2xl cursor-zoom-in transition-all duration-700",
         tilt && "lg:rotate-[-1deg] lg:hover:rotate-0",
         className,
       )}
     >
-      <div className="flex items-center gap-1.5 px-4 py-3 border-b border-border bg-secondary/60">
-        <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/30" />
-        <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/30" />
-        <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/30" />
-        <div className="ml-3 flex-1">
-          <div className="mx-auto max-w-xs h-5 rounded-md bg-background border border-border" />
+      <div className="flex items-center gap-2 px-6 py-4 border-b border-white/5 bg-white/[0.03]">
+        <div className="flex gap-1.5">
+          <span className="h-3 w-3 rounded-full bg-red-500/20 border border-red-500/30" />
+          <span className="h-3 w-3 rounded-full bg-yellow-500/20 border border-yellow-500/30" />
+          <span className="h-3 w-3 rounded-full bg-green-500/20 border border-green-500/30" />
+        </div>
+        <div className="ml-6 flex-1 max-w-md h-7 rounded-xl glass-button bg-white/[0.02] border-white/5 flex items-center px-4">
+          <div className="h-1 w-24 rounded-full bg-white/10" />
         </div>
       </div>
-      <div className="relative overflow-hidden">
-        <img src={src} alt={alt} loading="lazy" className="w-full h-auto block transition-transform duration-700 group-hover:scale-[1.02]" />
+      <div className="relative overflow-hidden group-hover:bg-white/[0.02] transition-colors duration-700">
+        <img src={src} alt={alt} loading="lazy" className="w-full h-auto block transition-transform duration-1000 group-hover:scale-[1.01]" />
         
         {/* Hover Overlay */}
-        <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          <div className="bg-background/80 backdrop-blur-sm p-3 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-            <Search className="h-5 w-5 text-primary" />
+        <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center pointer-events-none">
+          <div className="glass-card p-4 rounded-full shadow-2xl transform translate-y-8 group-hover:translate-y-0 transition-all duration-700 bg-black/40 border-primary/20">
+            <Search className="h-6 w-6 text-primary animate-pulse" />
           </div>
         </div>
       </div>
