@@ -9,7 +9,7 @@ const values = [
 
 export const ValueProps = () => {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section className="relative py-16 md:py-24 overflow-hidden">
       <div className="container relative z-10">
         <div className="max-w-3xl reveal">
           <span className="inline-block px-4 py-1.5 rounded-full glass-button text-xs font-bold uppercase tracking-widest text-primary mb-6">

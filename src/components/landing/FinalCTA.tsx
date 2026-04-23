@@ -6,7 +6,7 @@ export const FinalCTA = () => {
   const { open: openDemo } = useDemoModal();
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 overflow-hidden">
+    <section id="contact-final" className="relative py-16 md:py-24 overflow-hidden">
       <div className="container relative z-10">
         <div className="glass-card-yellow p-12 md:p-24 rounded-[4rem] text-center relative overflow-hidden reveal border-primary/20 bg-primary/5 shadow-xl">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-primary/10 blur-[100px] -z-10" />

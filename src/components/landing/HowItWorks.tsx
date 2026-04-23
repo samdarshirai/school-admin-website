@@ -7,7 +7,7 @@ const steps = [
 
 export const HowItWorks = () => {
   return (
-    <section id="how" className="relative py-24 md:py-32">
+    <section id="how" className="relative py-16 md:py-24">
       <div className="container relative z-10">
         <div className="max-w-3xl reveal text-center mx-auto mb-20">
           <span className="inline-block px-4 py-1.5 rounded-full glass-button text-xs font-bold uppercase tracking-widest text-primary mb-6">
