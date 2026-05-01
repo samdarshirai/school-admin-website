@@ -39,6 +39,15 @@ export const Hero = () => {
                   Book My Demo <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button
+                  asChild
+                  variant="outline"
+                  className="pill glass-button h-14 px-8 text-lg font-bold border-black/5 text-foreground hover:bg-black/10"
+                >
+                  <a href="https://app.acadmitra.com" target="_blank" rel="noopener noreferrer">
+                    Sign In/Sign Up
+                  </a>
+                </Button>
+                <Button
                   onClick={openTour}
                   variant="outline"
                   className="pill glass-button h-14 px-8 text-lg font-bold border-black/5 text-foreground hover:bg-black/10 group"
@@ -71,4 +80,3 @@ export const Hero = () => {
     </section>
   );
 };
-

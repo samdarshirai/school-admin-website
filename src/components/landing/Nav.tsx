@@ -67,6 +67,15 @@ export const Nav = () => {
           >
             Book My Demo
           </Button>
+          <Button
+            asChild
+            variant="outline"
+            className="pill glass-button h-12 px-8 font-bold border-black/5 text-foreground hover:bg-black/10"
+          >
+            <a href="https://app.acadmitra.com" target="_blank" rel="noopener noreferrer">
+              Sign In/Sign Up
+            </a>
+          </Button>
         </div>
 
         <Sheet>
@@ -91,6 +100,15 @@ export const Nav = () => {
               <div className="mt-auto flex flex-col gap-4">
                 <Button onClick={openDemo} className="pill bg-primary text-primary-foreground hover:bg-primary/90 font-bold h-14 text-lg">
                   Book a Demo
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="pill glass-button h-14 text-lg font-bold border-black/5 text-foreground hover:bg-black/10"
+                >
+                  <a href="https://app.acadmitra.com" target="_blank" rel="noopener noreferrer">
+                    Sign In/Sign Up
+                  </a>
                 </Button>
               </div>
             </div>
